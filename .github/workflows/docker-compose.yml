@@ -1,8 +1,8 @@
 version: "3.8"
 services:
        database:
-         image: mongo 
-         container_name: mongodb-container
+         image: maha152/hello
+         container_name: c7
          volumes:
               - mongo_data_volume:/data/db
        website:
