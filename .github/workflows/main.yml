@@ -19,5 +19,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: maha152/node.js:latest
+          tags: maha152/hello:latest
+          
+          
+          
 
