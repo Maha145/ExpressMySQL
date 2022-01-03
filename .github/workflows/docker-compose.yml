@@ -1,17 +1,13 @@
 version: "3.8"
 services:
        database:
-         image: maha152/hello
-         container_name: c7
-         volumes:
-              - mongo_data_volume:/data/db
+         image: mysql
+         container_name: maha
        website:
-            image: mohamedsayed404/product-web-app:1.0
-            container_name: product-web-app-container
+            image: maha152/hello
+            container_name: c7
             depends_on: 
                - database 
             ports:
-               - "4000:3000"         
-volumes:  
-   mongo_data_volume:
-     driver: local  
+               - "3000:80"        
+     
