@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+       database:
+         image: mongo 
+         container_name: mongodb-container
+         volumes:
+              - mongo_data_volume:/data/db
+       website:
+            image: mohamedsayed404/product-web-app:1.0
+            container_name: product-web-app-container
+            depends_on: 
+               - database 
+            ports:
+               - "4000:3000"         
+volumes:  
+   mongo_data_volume:
+     driver: local 
