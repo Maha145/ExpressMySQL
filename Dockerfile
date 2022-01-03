@@ -1,6 +1,6 @@
-FROM node:14
-
-WORKDIR /bezkoder-app
+FROM node:12-alpine
+WORKDIR /my-app
+COPY . . 
 RUN npm install
-COPY . .
-CMD npm start
+EXPOSE 3000
+CMD ["node", "server.js"]
